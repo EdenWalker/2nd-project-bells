@@ -11,24 +11,30 @@
   </style>
   <body>
 
-        <label for="subject">Subject:</label><br>
-        <input id="subject" ><br><br>
+        <label for="subject" >Task:</label><br>
+        <input id="subject" style="width: 25%;"><br><br>
 
-        <label for="urgency">Urgency:</label><br>
-        <input id="urgency"><br><br>
-
+        <label for="urgency">Urgency:<br>( 1 - 5 Least to Most )</label><br>
+        <select id="urgency" style="width: 25%;">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+<br><br>
         <label for="reg">ID:</label><br>
-        <input id="reg"><br><br>
+        <input id="reg" style="width: 25%;"><br><br>
 
 
 
 
-        <button id="addtd">add to todo</button>
-        <button id="modifytd">modify todo</button>
-        <button id="deletetd">complete todo</button>
-
-        
-        <p id="textz">    asd </p>
+        <button id="addtd">Add to List</button>
+        <button id="modifytd">Modify List</button>
+        <button id="deletetd">Complete Task</button><br><br>
+        <button id="sorttdid">Sort by ID</button>
+        <button id="sorttdur">Sort by Urgency</button>
+        <div class="simple" id="textz" >asd<divp>
     
   
   </body>
