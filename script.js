@@ -1,9 +1,6 @@
 
 let todos = [];
-todos.push(
-  { Id: 1, Name: "Buy groceries", Urgency: 3 },
-  { Id: 2, Name: "Call dad", Urgency: 2 },
-  { Id: 3, Name: "Finish project report", Urgency: 5 }
+todos.push({ Id: 1, Name: "Buy groceries", Urgency: 3 },{ Id: 2, Name: "Call dad", Urgency: 2 },{ Id: 3, Name: "Finish project report", Urgency: 5 }
 );
 const subject = document.getElementById('subject');
 const urgency = document.getElementById('urgency');
@@ -28,11 +25,7 @@ document.getElementById("sorttdur").addEventListener("click", function() {
 });
 
 function addTodo(todos, name, urgency) {
-  let newTodo = {
-    Id: Math.floor(Math.random() * 1000 + 1),
-    Name: name,
-    Urgency: urgency
-  };
+  let newTodo = {Id: Math.floor(Math.random() * 1000 + 1),Name: name,Urgency: urgency};
   todos.push(newTodo);
   updateDisplay();
   console.log(todos)
@@ -74,7 +67,7 @@ function deleteToDo(todos, Id) {
 }
 
 function updateDisplay() {
-  paragraph.innerText = JSON.stringify(todos, null, 2);
+  paragraph.innerText = JSON.stringify(todos, null, 2).slice(3,-2);
 }
 
 function sortToId(todos) {
